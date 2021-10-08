@@ -5,3 +5,10 @@
 h1 {
 	margin-top: 0em;
 }
+
+.component {
+	border: 1px solid gray;
+	padding: 1em;
+	margin: 0.5em;
+	border-radius: 1em;
+}
