@@ -7,6 +7,7 @@ const Lifecycle = () => {
 	console.log(`Jag skrivs ut inuti komponent-funktionen. x == ${x}, y == ${y}.`);
 
 	useEffect(() => {
+		// Körs vid livscykel händelsen MOUNTED
 		console.log('Jag skrivs ut inuti useEffect, med hjälp av [].');
 		setX(10)
 	}, [])
