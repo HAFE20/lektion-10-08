@@ -5,10 +5,15 @@ const Clock = () => {
 	const [seconds, setSeconds] = useState<number>(0)
 
 	useEffect(() => {
-		setInterval(() => {
+		let intervalId = setInterval(() => {
 			// Kan inte använda "seconds" direkt pga. "closure"
 			setSeconds(s => s + 1)
 		}, 1000)
+		const stopInterval = () => {
+			console.log('Nu stoppas intervallet')
+			clearInterval(intervalId)
+		}
+		return stopInterval
 	}, [])
 
 	return (
